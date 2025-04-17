@@ -1,0 +1,137 @@
+# Service ID
+#https://www.home-assistant.io/docs/blueprint/selectors/
+enter_ship_mode:
+  name: enter_ship_mode 
+  description: Allows BQ25895 to enter shipping mode
+
+exit_ship_mode:
+  name: exit_ship_mode
+  description: Allows BQ25895 to exit shipping mode
+
+set_charge_current_limit:
+  name: set_charge_current_limit
+  description: Allows BQ25895 to set charge current limit
+  fields:
+    charge_current_limit:
+      required: true
+      name: charge_current_limit
+      description: New charge current limit
+      example: 0.512
+      default: 1.024
+      selector:
+        number:
+         min: 0
+         max: 4.096
+         step: any
+         unit_of_measurement: "A"
+         mode: slider
+
+set_charge_voltage_limit:
+  name: set_charge_voltage_limit
+  description: Allows BQ25895 to set charge voltage limit
+  fields:
+    charge_voltage_limit:
+      required: true
+      name: charge_voltage_limit
+      description: New charge voltage limit
+      example: 4.064
+      default: 4.208
+      selector:
+        number:
+         min: 3.84
+         max: 4.608
+         step: any
+         unit_of_measurement: "V"
+         mode: slider
+
+set_input_current_limit:
+  name: set_input_current_limit
+  description: Allows BQ25895 to set input current limit
+  fields:
+    input_current_limit:
+      required: true
+      name: input_current_limit
+      description: New input current limit
+      example: 1.15
+      default: 0.5
+      selector:
+        number:
+         min: 0.1
+         max: 3.25
+         step: any
+         unit_of_measurement: "V"
+         mode: slider
+
+set_prechg_current:
+  name: set_prechg_current
+  description: Allows BQ25895 to set input precharge current
+  fields:
+    prechg_current:
+      required: true
+      name: prechg_current
+      description: New precharge current
+      example: 0.128
+      default: 0.256
+      selector:
+        number:
+         min: 0.064
+         max: 1.024
+         step: any
+         unit_of_measurement: "V"
+         mode: slider
+
+set_recharge_threshold:
+  name: set_recharge_threshold
+  description: Allows BQ25895 to set recharge threshold
+  fields:
+    recharge_threshold:
+      required: true
+      name: recharge_threshold
+      description: New recharge threshold volatge
+      example: 100
+      default: 200
+      selector:
+        number:
+         min: 100
+         max: 200
+         step: 100
+         unit_of_measurement: "mV"
+         mode: box
+
+set_term_current:
+  name: set_term_current
+  description: Allows BQ25895 to set termination current
+  fields:
+    term_current:
+      required: true
+      name: term_current
+      description: New termination current
+      example: 0.256
+      default: 0.128
+      selector:
+        number:
+         min: 0.064
+         max: 1.024
+         step: any
+         unit_of_measurement: "V"
+         mode: slider
+
+set_thermal_threshold:
+  name: set_thermal_threshold
+  description: Allows BQ25895 to set thermal threshold
+  fields:
+    thermal_threshold:
+      required: true
+      name: thermal_threshold
+      description: New thermal threshold
+      example: 80
+      default: 120
+      selector:
+        select:
+         mode: dropdown
+         options:
+           - 60
+           - 80
+           - 100
+           - 120
+

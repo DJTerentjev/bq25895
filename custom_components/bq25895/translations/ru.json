@@ -1,0 +1,132 @@
+{
+  "config": {
+    "title": "BQ25895 настройка подключения",
+    "abort": {
+      "already_configured": "Устройство уже настроено",
+      "reconfigure_successful": "Устройство перенастроено",
+      "already_in_progress": "Настройка этой интеграции уже начата"
+    },
+    "error": {
+      "cannot_connect": "Соединение отсутствует",
+      "invalid_settings": "Неправильные настройки",
+      "unknown": "Неизвестная ошибка"
+    },
+    "step": {
+      "user": {
+        "title": "BQ25895 параметры подключения",
+        "data": {
+          "I2C_addr": "I2C адрес",
+          "I2C_bus": "I2C шина",
+          "Min_batttery_voltage": "Минимальное напряжение разряда, В"
+        }
+      },
+      "reconfigure": {
+        "title": "BQ25895 пренастройка подключения",
+        "data": {
+          "I2C_addr": "I2C адрес",
+          "I2C_bus": "I2C шина",
+          "Min_batttery_voltage": "Минимальное напряжение разряда, В"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "options": {
+        "title": "BQ25895 настройки",
+        "description": "Выберете настройки заряда.",
+        "data": {
+          "scan_interval": "Интервал опроса (секунды)",
+          "Recharge_threshold": "Порог подзарядки, мВ",
+          "Thermal_threshold": "Порог температуры ограничения заряда, ºC",
+          "Charge_current_limit": "Ораничение тока заряда, А",
+          "Charge_voltage_limit": "Ограничение напряжения заряда, В",
+          "Input_current_limit": "Максимальный ток потребления, А",
+          "Prechg_current": "Ток предзаряда, А",
+          "Term_current": "Ток окончания заряда, A"
+
+        }
+      }
+    }
+  },
+  "services": {
+    "enter_ship_mode": {
+      "name": "enter_ship_mode",
+      "description": "Отключение питания BQ25895 от батареии"
+    },
+    "exit_ship_mode": {
+      "name": "exit_ship_mode",
+      "description": "Включение питания BQ25895 от батареии"
+    },
+    "set_charge_current_limit": {
+      "name": "set_charge_current_limit",
+      "description": "Установить ораничение тока заряда",
+      "fields": {
+        "charge_current_limit": {
+          "name": "charge_current_limit",
+          "description": "Новый уровень тока заряда, А"
+        }
+      }
+    },
+    "set_charge_voltage_limit": {
+      "name": "set_charge_voltage_limit",
+      "description": "Установить ограничение напряжения заряда",
+      "fields": {
+        "charge_voltage_limit": {
+          "name": "charge_voltage_limit",
+          "description": "Новый уровень тока заряда, В"
+        }
+      }
+    },
+    "set_input_current_limit": {
+      "name": "set_input_current_limit",
+      "description": "Установить максимальный ток потребления",
+      "fields": {
+        "input_current_limit": {
+          "name": "input_current_limit",
+          "description": "Новый уровень тока потребления, А"
+        }
+      }
+    },
+    "set_prechg_current": {
+      "name": "set_prechg_current",
+      "description": "Установить ток предзаряда",
+      "fields": {
+        "prechg_current": {
+          "name": "prechg_current",
+          "description": "Новый ток предзаряда, А"
+        }
+      }
+    },
+    "set_recharge_threshold": {
+      "name": "set_recharge_threshold",
+      "description": "Установть порог подзарядки",
+      "fields": {
+        "recharge_threshold": {
+          "name": "recharge_threshold",
+          "description": "Порог подзарядки, мВ"
+        }
+      }
+    },
+    "set_term_current": {
+      "name": "set_term_current",
+      "description": "Установить ток окончания заряда",
+      "fields": {
+        "term_current": {
+          "name": "term_current",
+          "description": "Новый ток окончания заряда"
+        }
+      }
+    },
+    "set_thermal_threshold": {
+      "name": "set_thermal_threshold",
+      "description": "Установить порог температуры ограничения заряда",
+      "fields": {
+        "thermal_threshold": {
+          "name": "thermal_threshold",
+          "description": "Новый порог температуры"
+        }
+      }
+    }
+  }
+}

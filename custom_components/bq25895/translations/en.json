@@ -1,0 +1,132 @@
+{
+  "config": {
+    "title": "BQ25895 Config Flow",
+    "abort": {
+      "already_configured": "Device is already configured",
+      "reconfigure_successful": "Reconfiguration successful",
+      "already_in_progress": "A setup is already in progress for this integration"
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_auth": "Invalid authentication",
+      "invalid_settings": "Invalid settings",
+      "unknown": "Unexpected error"
+    },
+    "step": {
+      "user": {
+        "title": "BQ25895 configuration",
+        "data": {
+          "I2C_addr": "I2C address",
+          "I2C_bus": "I2C bus",
+          "Min_batttery_voltage": "Min batttery voltage"
+        }
+      },
+      "reconfigure": {
+        "title": "BQ25895 reconfiguration",
+        "data": {
+          "I2C_addr": "I2C address",
+          "I2C_bus": "I2C bus",
+          "Min_batttery_voltage": "Min batttery voltage"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "options": {
+        "title": "BQ25895 Options",
+        "description": "Select which options to amend.",
+        "data": {
+          "scan_interval": "Scan Interval (seconds)",
+          "Recharge_threshold": "Recharge threshold, mA",
+          "Thermal_threshold": "Thermal threshold, ºC",
+          "Charge_current_limit": "Charge current limit",
+          "Charge_voltage_limit": "Charge voltage limit",
+          "Input_current_limit": "Input current limit",
+          "Prechg_current": "Precharge current",
+          "Term_current": "Termination current"
+        }
+      }
+    }
+  },
+  "services": {
+    "enter_ship_mode": {
+      "name": "enter_ship_mode",
+      "description": "Allows BQ25895 to enter shipping mode"
+    },
+    "exit_ship_mode": {
+      "name": "exit_ship_mode",
+      "description": "Allows BQ25895 to exit shipping mode"
+    },
+    "set_charge_current_limit": {
+      "name": "set_charge_current_limit",
+      "description": "Allows BQ25895 to set charge current limit",
+      "fields": {
+        "charge_current_limit": {
+          "name": "charge_current_limit",
+          "description": "New charge current limit"
+        }
+      }
+    },
+    "set_charge_voltage_limit": {
+      "name": "set_charge_voltage_limit",
+      "description": "Allows BQ25895 to set charge voltage limit",
+      "fields": {
+        "charge_voltage_limit": {
+          "name": "charge_voltage_limit",
+          "description": "New charge voltage limit"
+        }
+      }
+    },
+    "set_input_current_limit": {
+      "name": "set_input_current_limit",
+      "description": "Allows BQ25895 to set input current limit",
+      "fields": {
+        "input_current_limit": {
+          "name": "input_current_limit",
+          "description": "New input current limit"
+        }
+      }
+    },
+    "set_prechg_current": {
+      "name": "set_prechg_current",
+      "description": "Allows BQ25895 to set input precharge current",
+      "fields": {
+        "prechg_current": {
+          "name": "prechg_current",
+          "description": "New precharge current"
+        }
+      }
+    },
+    "set_recharge_threshold": {
+      "name": "set_recharge_threshold",
+      "description": "Allows BQ25895 to set recharge threshold",
+      "fields": {
+        "recharge_threshold": {
+          "name": "recharge_threshold",
+          "description": "New recharge threshold volatge"
+        }
+      }
+    },
+    "set_term_current": {
+      "name": "set_term_current",
+      "description": "Allows BQ25895 to set termination current",
+      "fields": {
+        "term_current": {
+          "name": "term_current",
+          "description": "New termination current"
+        }
+      }
+    },
+    "set_thermal_threshold": {
+      "name": "set_thermal_threshold",
+      "description": "Allows BQ25895 to set thermal threshold",
+      "fields": {
+        "thermal_threshold": {
+          "name": "thermal_threshold",
+          "description": "New thermal threshold"
+        }
+      }
+    }
+  }
+}
