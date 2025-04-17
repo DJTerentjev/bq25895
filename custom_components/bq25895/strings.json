@@ -1,6 +1,5 @@
 {
   "config": {
-    "title": "BQ25895 Config Flow",
     "abort": {
       "already_configured": "Device is already configured",
       "reconfigure_successful": "Reconfiguration successful",
@@ -38,8 +37,13 @@
         "description": "Select which options to amend.",
         "data": {
           "scan_interval": "Scan Interval (seconds)",
-          "Recharge_threshold": "Recharge threshold",
-          "Charge_current_limit": "Charge current limit"
+          "Recharge_threshold": "Recharge threshold, mA",
+          "Thermal_threshold": "Thermal threshold, ºC",
+          "Charge_current_limit": "Charge current limit",
+          "Charge_voltage_limit": "Charge voltage limit",
+          "Input_current_limit": "Input current limit",
+          "Prechg_current": "Precharge current",
+          "Term_current": "Termination current"
         }
       }
     }

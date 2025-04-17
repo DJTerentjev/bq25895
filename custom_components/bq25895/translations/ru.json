@@ -1,6 +1,5 @@
 {
   "config": {
-    "title": "BQ25895 настройка подключения",
     "abort": {
       "already_configured": "Устройство уже настроено",
       "reconfigure_successful": "Устройство перенастроено",
