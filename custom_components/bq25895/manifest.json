@@ -7,7 +7,7 @@
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/DJTerentjev/bq25895",
-  "homekit": {},
+  "integration_type": "hub",
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/DJTerentjev/bq25895/issues",
   "requirements": ["smbus2>=0.4.2"],
